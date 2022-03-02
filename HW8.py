@@ -1,5 +1,6 @@
 class Vehicle:
     sound = "BEEP!"
+
     def __init__(self, color: str = "Black", body_type: str = "Sedan", brand_model_name: str = "Ford Crown Victoria"):
         self.color = color
         self.body_type = body_type
@@ -25,6 +26,7 @@ class Vehicle:
 
 class Truck(Vehicle):
     sound = "BOONG!"
+
     def __init__(self, color, body_type, brand_model, load_capacity: int, amount_of_seats: int):
         super().__init__(color, body_type, brand_model)
         self.load_capacity = load_capacity
@@ -34,11 +36,9 @@ class Truck(Vehicle):
         print("We can order any truck for you")
 
 
-
 def main():
     my_truck = Truck("Black", "Pickup", "Ford", 700, 7)
     my_truck.beep()
-    # print(Truck.brand_model)
 
 
 if __name__ == '__main__':
