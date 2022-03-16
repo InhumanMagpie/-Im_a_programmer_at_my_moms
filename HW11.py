@@ -11,5 +11,5 @@ def geometric_progression(number: float, progression_denominator: float):
 qwerty = geometric_progression(2, 2)
 for i in qwerty:
     print(i)
-    break
+
 
