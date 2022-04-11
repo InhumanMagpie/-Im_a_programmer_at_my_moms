@@ -1,4 +1,4 @@
-from ..HW17 import db
+from database import db
 
 
 class Event(db.Model):
