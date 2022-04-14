@@ -6,6 +6,7 @@ from flask import request, Response
 from app import app
 from database import db
 from models.event import Event
+from models.m2m_user_events import M2MUserEvents
 from models.user import User
 
 
@@ -16,6 +17,14 @@ def create_user():
     db.session.add(user)
     db.session.commit()
     return data
+
+
+@app.route("/sign/", methods=["POST"])
+def sign_event():
+    data = request.get_json()
+    event = M2MUserEvents(user_id=data["user_id"], event_id=data["event_id"])
+    db.session.add(event)
+    db.session.commit()
 
 
 @app.route("/event/", methods=["POST"])
@@ -45,9 +54,9 @@ def get_event(event_id: int):
 
 @app.route("/user/")
 def get_all_users():
-    all_users = User.query
+    all_users = User.query.all()
     dict_users = []
-    for user in all_users.all():
+    for user in all_users:
         dict_users.append(user.to_dict())
 
     return Response(json.dumps(dict_users), mimetype='application/json')
