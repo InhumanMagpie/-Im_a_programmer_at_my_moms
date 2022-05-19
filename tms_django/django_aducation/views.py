@@ -6,26 +6,18 @@ from django.shortcuts import render
 # Create your views here.
 from django.views import View
 
-from django_aducation.models import Person
+# from django_aducation.models import Person
+
+from django.http import HttpResponse
 
 
-def post_list(request):
-    return render(request, 'blog/post_list.html', {})
+def home(request):
+    return render(request, "home_page.html")
 
 
-class IndexView(View):
-
-    def get(self, request, *args, **kwargs):
-        return HttpResponse('Hello, World!')
+def about_us(request):
+    return render(request, "about_us.html")
 
 
-def current_datetime(request):
-    now = datetime.datetime.now()
-    html = "<html><body>It is now %s.</body></html>" % now
-    return HttpResponse(html)
-
-
-def show_user(request):
-    user = Person.objects.all()
-    context = {"user": list(user)}
-    return JsonResponse(context)
+def our_partners(request):
+    return render(request, "our_partners.html")
