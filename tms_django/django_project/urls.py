@@ -23,7 +23,7 @@ from django_project import settings
 
 urlpatterns = [
     path('', views.home, name="home_page"),
-    path('about_us/', TemplateView.as_view(template_name="about_us.html"), name="about_us"),
+    path('about_us/', TemplateView.as_view(template_name="content_for_about_us.html"), name="about_us"),
     path('home_page/', TemplateView.as_view(template_name="home_page.html"), name="home_page"),
     path('our_partners/', TemplateView.as_view(template_name="our_partners.html"), name="our_partners")
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
