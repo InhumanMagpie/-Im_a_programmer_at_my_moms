@@ -15,9 +15,9 @@ def home(request):
     return render(request, "home_page.html")
 
 
-def about_us(request):
-    return render(request, "about_us.html")
+def post_1(request):
+    return render(request, "post_1.html")
 
 
-def our_partners(request):
-    return render(request, "our_partners.html")
+def post_2(request):
+    return render(request, "post_2.html")

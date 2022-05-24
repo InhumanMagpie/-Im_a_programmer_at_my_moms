@@ -7,7 +7,11 @@
             <title>Hello Django</title>
         </head>
         <body>
-            <h1>I look at the code</h1>{% include "nav_bar.html" %}
+            <div>
+                {% block content %}
+                {% endblock %}
+                {% include "nav_bar.html" %}
+            </div>
             <img src="{% static 'images/home.jpg' %}" alt="I look at the code" >
         </body>
     </html>
