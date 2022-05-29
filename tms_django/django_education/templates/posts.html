@@ -1,0 +1,11 @@
+{% extends "home_page.html" %}
+{% block content %}
+    {% for post in posts %}
+        <a href=http://127.0.0.1:8000/django_education/post/{{ post.id }}>
+            <p>{{ post.header }}</p>
+            <p>{{ post.post }}</p>
+            <p>{{ post.time }}</p>
+            <div>-----------------</div>
+        </a>
+    {% endfor %}
+{% endblock %}

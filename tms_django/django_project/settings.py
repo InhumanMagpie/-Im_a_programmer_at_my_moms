@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_aducation.apps.DjangoAducationConfig'
+    'django_education.apps.DjangoAducationConfig'
 
 ]
 
@@ -115,9 +115,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "django_aducation", "../django_aducation/../django_aducation/static"),
-]
+
 
 STATIC_ROOT = "STATIC_FILES"
 # Default primary key field type
