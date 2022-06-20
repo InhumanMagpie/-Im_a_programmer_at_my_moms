@@ -1,5 +1,18 @@
-<p>{{ post.title }}</p>
-<p>{{ post.content }}</p>
-<p>{{ post.created_at }}</p>
-<p>{{ post.author }}</p>
-<p>{{ post.image_content }}</p>
+{% extends "home_page.html" %}
+
+ {% block styles %}
+        .card {
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+ {% endblock %}
+
+{% block content %}
+    <div class="margin_top_100px">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}
