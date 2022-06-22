@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_education.apps.DjangoAducationConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
