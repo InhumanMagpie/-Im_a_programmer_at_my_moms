@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django-filter = "*"
+markdown = "*"
+djangorestframework = "*"
+django = "*"
+psycopg2-binary = "*"
+djangorestframework-simplejwt = {extras = ["crypto"], version = "*"}
+pillow = "*"
+pymemcache = "*"
+drf-cached-instances = "*"
+django-debug-toolbar = "*"
+django-rest-swagger = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
