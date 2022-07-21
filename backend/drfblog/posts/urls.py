@@ -8,6 +8,6 @@ router = DefaultRouter()
 router.register(r"posts/text", TextPostViewSet, basename="text")
 router.register(r"posts/image", ImagePostViewSet, basename="image")
 router.register(r"authors", AuthorViewSet, basename="authors")
-router.register(r"authors/info", AuthorInfoViewSet, basename="authors_info")
+router.register(r"info", AuthorInfoViewSet, basename="authors_info")
 router.register(r"comments", CommentsViewSet, basename="comments")
 urlpatterns = router.urls

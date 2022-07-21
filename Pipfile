@@ -14,7 +14,11 @@ pillow = "*"
 pymemcache = "*"
 drf-cached-instances = "*"
 django-debug-toolbar = "*"
-django-rest-swagger = "*"
+drf-yasg = "*"
+gunicorn = "*"
+celery = "*"
+pytest = "*"
+redis = "*"
 
 [dev-packages]
 

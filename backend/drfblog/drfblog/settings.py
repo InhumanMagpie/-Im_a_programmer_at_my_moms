@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'posts',
     'debug_toolbar',
-    'rest_framework_swagger',
+    'drf_yasg',
+    'celery',
 ]
 
 INTERNAL_IPS = [

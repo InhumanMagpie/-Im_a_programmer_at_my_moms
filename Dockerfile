@@ -9,6 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # install dependencies
+RUN apk add gcc musl-dev
 RUN pip install --upgrade pip pipenv
 COPY ./Pipfile* .
 RUN pipenv install --deploy --system --clear
