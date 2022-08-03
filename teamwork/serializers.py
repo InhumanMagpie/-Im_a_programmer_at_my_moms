@@ -1,7 +1,7 @@
 from django.contrib.auth.models import Permission
 from rest_framework import serializers
 
-from myproject.teamwork.models import User, Team
+from teamwork.models import User, Team
 
 
 class CustomSerializer(serializers.Serializer):
