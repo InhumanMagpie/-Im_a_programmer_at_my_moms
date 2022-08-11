@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "teamwork",
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,6 @@ DATABASES = {
         "USER": "ougen",
         "PASSWORD": "1245",
         "HOST": "127.0.0.1",
-        # "HOST": "postgres",
         "PORT": "5432",
     }
 }
@@ -131,4 +131,4 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = 'it_company.User'
+AUTH_USER_MODEL = 'teamwork.User'

@@ -54,7 +54,7 @@ class User(AbstractUser):
     def save(self, *args, **kwargs):
         self.set_status()
         self.generate_slug()
-        return super().save(self, *args, **kwargs)
+        return super().save(*args, **kwargs)
 
 
 class Team(models.Model):

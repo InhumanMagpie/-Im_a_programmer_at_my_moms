@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 python-slugify = "*"
+gunicorn = "*"
 
 [dev-packages]
 
