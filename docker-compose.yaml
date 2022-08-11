@@ -1,0 +1,13 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:11-alpine
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data/pgdata
+    environment:
+      POSTGRES_DB: teamwork
+      POSTGRES_USER: ougen
+      POSTGRES_PASSWORD: 1245
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
